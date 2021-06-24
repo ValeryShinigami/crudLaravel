@@ -50,7 +50,7 @@ class BookController extends Controller
             "nomDuLivre" => ["required", "string", "max:255", 'unique:books'],
             "nomAuteur" => ["required", "string", "max:255"],
             "avis" => ["required", "string", "max:255"],
-            "note" => ["required", "integer", "max:255"],
+            "note" => ["required", "integer", "max:2"],
         
         ], 
         [
@@ -59,10 +59,18 @@ class BookController extends Controller
             "nomDuLivre.max" => "entrez au maximum 255 caractères",
             "nomDuLivre.unique" => "ce nom existe déjà",
 
-            "nomAuteur.required" => "entrez le nom de votre livre",
+            "nomAuteur.required" => "entrez le nom d'auteur de votre livre",
             "nomAuteur.string" => "entrez une chaine de caratère valide",
             "nomAuteur.max" => "entrez au maximum 255 caractères",
-            "nomAuteur.unique" => "ce nom existe déjà",
+
+            "avis.required" => "merci de mettre un avis",
+            "avis.string" => "entrez une chaine de caratère valide",
+            "avis.max" => "entrez au maximum 255 caractères",
+
+            "note.required" => "merci de mettre une note",
+            "note.string" => "entrez une chaine de caratère valide",
+            "note.max" => "entrez au maximum une note de 20 ",
+            
 
 
         ]);
