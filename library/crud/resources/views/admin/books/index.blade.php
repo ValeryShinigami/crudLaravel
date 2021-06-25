@@ -5,7 +5,7 @@
 @section('mycontent')
 
 <div class="d-flex justify-content-center mt-3">
-    <a href="{{ route('admin.book.create') }}" type="bouton" class="btn btn-primary"> Book</a>
+    <a href="{{ route('admin.books.create') }}" type="bouton" class="btn btn-primary"> Book</a>
 </div>
 
 @if (session('success'))
@@ -52,8 +52,8 @@
                     <td>{{ $book->created_at}}</td>
                     <td>{{ $book->updated_at}}</td>
                     <td>
-                        <a href="{{-- route('admin.categories.edit', $category->id) --}}" class="btn btn-sm btn-secondary">Modifier</a>
-                        <form action="{{-- route('admin.categories.delete', $category->id) --}}" method="POST" class="d-inline">
+                        <a href="{{ route('admin.books.edit', $book->id) }}" class="btn btn-sm btn-secondary">Modifier</a>
+                        <form action="{{-- route('admin.books.delete', $book->id) --}}" method="POST" class="d-inline">
                             @csrf
                             @method('delete')
                             <input type="submit" value="supprimer" class="btn btn-sm btn-danger" onclick="return confirm('confirmer la suppression ?')">

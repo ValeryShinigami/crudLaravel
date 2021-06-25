@@ -32,6 +32,8 @@ Route::get('logout',function()
 
 Route::get('/admin/index', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
 
-Route::get('/admin/book/index', [App\Http\Controllers\Admin\BookController::class, 'index'])->name('admin.book.index');
-Route::get('/admin/book/create', [App\Http\Controllers\Admin\BookController::class, 'create'])->name('admin.book.create');
-Route::post('/admin/book/store', [App\Http\Controllers\Admin\BookController::class, 'store'])->name('admin.book.store');
+Route::get('/admin/books/index', [App\Http\Controllers\Admin\BookController::class, 'index'])->name('admin.books.index');
+Route::get('/admin/books/create', [App\Http\Controllers\Admin\BookController::class, 'create'])->name('admin.books.create');
+Route::post('/admin/books/store', [App\Http\Controllers\Admin\BookController::class, 'store'])->name('admin.books.store');
+Route::get('/admin/books/edit/{id}', [App\Http\Controllers\Admin\BookController::class, 'edit'])->name('admin.books.edit');
+Route::patch('/admin/books/update/{id}', [App\Http\Controllers\Admin\BookController::class, 'update'])->name('admin.books.update');

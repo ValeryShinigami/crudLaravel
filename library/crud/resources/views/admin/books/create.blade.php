@@ -5,7 +5,7 @@
 @section('mycontent')
 
 <div class="formule container mt-2">
-    <form action="{{ route('admin.book.store') }}" method="POST"> 
+    <form action="{{ route('admin.books.store')}}" method="POST"> 
          @csrf
          
           <div class="form-group">
@@ -22,7 +22,7 @@
 
         <div class="form-group">
             <label for="avis">Avis</label>
-            <textarea name="avis" id="avis" cols="50" rows="3"></textarea>
+            <input type="text" name="avis" id="avis" class="form-control" value="{{ old('avis') }}">
             <div class="text-danger">{{ $errors->first('avis', ':message') }}</div>
         </div>
 
