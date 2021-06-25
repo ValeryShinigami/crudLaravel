@@ -53,7 +53,7 @@
                     <td>{{ $book->updated_at}}</td>
                     <td>
                         <a href="{{ route('admin.books.edit', $book->id) }}" class="btn btn-sm btn-secondary">Modifier</a>
-                        <form action="{{-- route('admin.books.delete', $book->id) --}}" method="POST" class="d-inline">
+                        <form action="{{ route('admin.books.delete', $book->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('delete')
                             <input type="submit" value="supprimer" class="btn btn-sm btn-danger" onclick="return confirm('confirmer la suppression ?')">

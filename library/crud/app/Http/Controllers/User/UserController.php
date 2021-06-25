@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware(['auth', 'user']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('user.index');
     }
 
     /**
