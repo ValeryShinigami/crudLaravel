@@ -35,6 +35,7 @@
           
         <div class="form-group text-center">
             <input type="submit" class="btn btn-success">
+            <a href="{{ route('admin.books.index') }}" type="bouton" class="btn btn-primary"> retour</a>
         </div>
 
     </form>

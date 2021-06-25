@@ -34,6 +34,9 @@
           
         <div class="form-group text-center">
             <input type="submit" class="btn btn-success" value="sauvegarder">
+            <a href="{{ route('admin.index') }}" type="bouton" class="btn btn-primary"> retour</a>
+           
+            
         </div>
 
     </form>

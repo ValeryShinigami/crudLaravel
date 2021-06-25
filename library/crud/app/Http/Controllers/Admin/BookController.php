@@ -201,4 +201,6 @@ class BookController extends Controller
         $book->delete();
         return redirect()->route('admin.books.index')->with(["success" => "article supprimé"]);
     }
+
+
 }
